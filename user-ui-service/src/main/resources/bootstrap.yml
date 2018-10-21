@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: UserUiService
+  config:
+    name: CONFIGSERVER
+  cloud:
+    config:
+      uri: ${SPRING_CONFIG_URI:http://localhost:8888}
+server:
+  port: 5000
+
+feign:
+    hystrix:
+        enabled: true
